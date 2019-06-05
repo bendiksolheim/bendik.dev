@@ -3,7 +3,7 @@
 ## Publish new image
 
 ```
-./publish.sh
+./submit-image.sh
 ```
 
 ## Deploy newest image
