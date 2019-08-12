@@ -16,7 +16,7 @@ html {
 
 html,
 body {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 body {
@@ -38,6 +38,10 @@ body {
 
 .intro__title {
   font-size: 2rem;
+}
+
+.intro__bio {
+  width: 300px;
 }
 
 .mail,
