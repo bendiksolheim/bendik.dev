@@ -19,3 +19,12 @@ jobs:
       uses: actions/gcloud/cli@master
       with:
         args: --project bendik-dev builds submit --tag gcr.io/bendik-dev/bendik-dev
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+    - name: Deploy new revision
+      uses: actions/gcloud/cli@master
+      with:
+        args: --project bendik-dev beta run deploy bendik-dev --platform managed --region us-central1 --allow-unauthenticated --image gcr.io/bendik-dev/bendik-dev
