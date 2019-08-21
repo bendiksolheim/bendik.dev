@@ -18,4 +18,4 @@ jobs:
     - name: Build docker image
       uses: actions/gcloud/cli@master
       with:
-        args: builds submit --tag gcr.io/bendik-dev/bendik-dev
+        args: --project bendik-dev builds submit --tag gcr.io/bendik-dev/bendik-dev
