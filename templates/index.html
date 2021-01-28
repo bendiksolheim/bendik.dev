@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}
+bendik.dev
+{% endblock title %}
+
+{% block content %}
+<h1>Bendik Solheim</h1>
+<p class="subtitle">Mostly a developer.</p>
+{% set posts = get_section(path="posts/_index.md") %}
+{% for post in posts.pages %}
+    <section>
+    {% if post.extra.url %}
+        <h2><a href="{{ post.extra.url }}">{{ post.title }}</a></h2>
+        <h3>{{ post.date | date(format="%B %e, %Y") }} – {{ post.extra.reading_time }} minutes</h3>
+        {{ post.content | safe }}
+    {% else %}
+        <h2><a href="{{ post.permalink }}">{{ post.title }}</a></h2>
+        <h3>{{ post.date | date(format="%B %e, %Y") }} – {{ post.reading_time }} minutes</h3>
+        {{ post.summary | safe}}
+    {% endif %}
+    </section>
+{% endfor %}
+{% endblock content %}

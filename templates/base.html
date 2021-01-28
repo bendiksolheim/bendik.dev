@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>{% block title %}{% endblock title %}</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="{{ get_url(path="tufte-dark.css") }}">
+    </head>
+    <body>
+    <article>
+    {% block content %}{% endblock content %}
+    </article>
+    </body>
+</html>
