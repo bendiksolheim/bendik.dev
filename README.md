@@ -1,21 +1,13 @@
-# https://bendik.dev
+# https://www.bendik.dev
 
-Webpage running on Google Cloud Run from a docker container. Cool, right?
+Personal blog.
 
 ## Develop locally
 
 ```
-./develop.sh
+zola serve --drafts
 ```
 
-## Publish new image
+## Deploy
 
-```
-./submit-image.sh
-```
-
-## Deploy newest image
-
-```
-./deploy.sh
-```
+Just push master. For reals.
