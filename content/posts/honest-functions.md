@@ -1,5 +1,5 @@
 +++
-title = "(Dis)Honest functions"
+title = "(Dis)Honest Functions"
 date = 2021-03-03
 +++
 
