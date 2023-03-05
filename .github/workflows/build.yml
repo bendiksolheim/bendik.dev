@@ -9,12 +9,12 @@ jobs:
     name: Publish site
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout main
-      uses: actions/checkout@v3.0.0
-    - name: Build and deploy
-      uses: shalzz/zola-deploy-action@v0.16.1
-      env:
-        # Target branch
-        PAGES_BRANCH: gh-pages
-        # Provide personal access token
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Checkout main
+        uses: actions/checkout@v3.0.0
+      - name: Build and deploy
+        uses: shalzz/zola-deploy-action@v0.17.1
+        env:
+          # Target branch
+          PAGES_BRANCH: gh-pages
+          # Provide personal access token
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
