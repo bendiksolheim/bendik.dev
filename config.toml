@@ -17,6 +17,8 @@ default_language = "en"
 
 generate_feed = true
 
+minify_html = true
+
 [markdown]
 highlight_code = true
 highlight_theme = "material-dark"
